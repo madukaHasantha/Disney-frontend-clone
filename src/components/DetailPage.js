@@ -29,7 +29,7 @@ function DetailPage() {
         return <div>Loading...</div>;  
     }
 
-        console.log("Movie is", movie);
+        //console.log("Movie is", movie);
 
   return (
 
