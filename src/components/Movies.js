@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { selectMovies } from '../features/movie/movieSlice'
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'  //allows you to access the state stored in the Redux store from within a React component. 
  
 
 function Movies() {
 
-    const movies = useSelector(selectMovies);
+    const movies = useSelector(selectMovies); // get movies from current state
     //console.log("This is movies", movies);
     //console.log(movies.id);
     

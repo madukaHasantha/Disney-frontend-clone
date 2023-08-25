@@ -3,9 +3,8 @@ import styled from 'styled-components'
 import ImageSlider from './ImageSlider'
 import Viewers from './Viewers'
 import Movies from './Movies'
-import DetailPage from './DetailPage'
 import db from '../firebase'
-import { useDispatch} from "react-redux"
+import { useDispatch} from "react-redux"  //this function is used to send actions to the Redux store
 import { setMovies } from '../features/movie/movieSlice'
 
 
@@ -14,7 +13,7 @@ function Home() {
 
     const dispatch = useDispatch();
 
-    useEffect(() => {
+    useEffect(() => {   // when this component render firstly this function works, the at fist this is working 
 
         db.collection("movies").onSnapshot((snapshot) =>{
             let tempMovies = snapshot.docs.map((doc) =>{
